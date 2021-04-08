@@ -1,29 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
 
-/* responsive nav styles */
-
-.checkbox {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  div.nav-bar {
-    position: relative;
-  }
-
-  ul.nav-links {
-    display: none;
-  }
-
-  .checkbox:checked ~ ul.nav-links {
-    display: block;
-  }
-
-  label {
-    cursor: pointer;
-  }
-}
-
 @media screen and (max-width: 500px) {
 }
 
@@ -48,9 +24,7 @@ div.logo {
 }
 
 ul.nav-links {
-  position: absolute;
-  background: white;
-  padding: 2rem;
+  display: flex;
 }
 
 ul li {
@@ -609,5 +583,33 @@ div.footer h6 {
 
   div.footer h6 {
     padding-top: 3rem;
+  }
+}
+
+/* responsive nav styles */
+label,
+.checkbox {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  div.nav-bar {
+    position: relative;
+  }
+
+  ul.nav-links {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 1rem;
+  }
+
+  .checkbox:checked ~ ul.nav-links {
+    display: block;
+  }
+
+  label {
+    display: block;
+    cursor: pointer;
   }
 }
